@@ -1,0 +1,8 @@
+services:
+  smtp:
+    build: .
+    ports:
+      - "25:25"
+    volumes:
+      - ./output:/output
+    restart: unless-stopped
