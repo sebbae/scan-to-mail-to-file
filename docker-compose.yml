@@ -3,6 +3,7 @@ services:
     build: .
     ports:
       - "25:25"
+    user: "${UID}:${GID}"
     volumes:
-      - ./output:/output
+      - ${OUTPUT_DIR:-./output}:/output
     restart: unless-stopped
